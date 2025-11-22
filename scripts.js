@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     if (nav) {
         window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 400);
+            nav.classList.toggle('scrolled', window.scrollY > 450);
         });
     }
 });
