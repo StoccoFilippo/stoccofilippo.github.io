@@ -1,15 +1,3 @@
-// Apply theme immediately to avoid FOUC
-(function () {
-    try {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.body.classList.add('light-mode');
-        }
-    } catch (e) {
-        console.warn('LocalStorage access denied or not supported:', e);
-    }
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Update Time & Date
     function updateTime() {
@@ -37,17 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+    }
+
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             const isLight = body.classList.contains('light-mode');
 
             // Save preference
-            try {
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            } catch (e) {
-                console.warn('Unable to save theme preference:', e);
-            }
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
         });
     }
 });
