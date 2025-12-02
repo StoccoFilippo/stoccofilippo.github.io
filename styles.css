@@ -136,6 +136,8 @@ section h2 {
 
 /* Project List (And-Now style) */
 .project-list {
+  font-size: 0.8rem;
+  font-style: italic;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -274,7 +276,7 @@ footer {
 /* Light Mode */
 body.light-mode {
   background: #f4f4f4;
-  color: #333;
+  color: #000;
 }
 
 body.light-mode .hero {
@@ -297,6 +299,16 @@ body.light-mode .glass-panel {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+}
+
+/* Glass Panel Utility (Base/Dark Mode) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   border-radius: 1.5rem;
 }
 
