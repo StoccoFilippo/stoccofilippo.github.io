@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     if (nav) {
         const hero = document.querySelector('.hero');
-        const threshold = hero ? 450 : 10;
+        const threshold = hero ? 450 : 0;
 
         // Initial check in case we load on a scrolled page (especially for non-home pages)
         if (window.scrollY > threshold) {
