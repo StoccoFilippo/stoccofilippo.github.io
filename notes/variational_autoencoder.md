@@ -3,10 +3,13 @@ layout: note
 title: Variational Autoencoder (VAE)
 ---
 
-Variational Autoencoders (VAEs) are generative models that learn probabilistic representations of data by mapping observed data to a latent space. Unlike traditional autoencoders, which map data to a deterministic latent space (you can consider them as a simple function $f(x)$ mapping data to a latent space), VAEs use a probabilistic encoder that learns a distribution over the latent variables $z$.
+Variational Autoencoders (VAEs) are generative models that learn probabilistic representations of data $x$ by mapping $x$ to a latent space $z$. Unlike traditional autoencoders, which map in a deterministic fashion (you can consider them as a simple function $f(x)\rightarrow z$ mapping data to a latent space), VAEs use a probabilistic encoder that learns a distribution over the latent space $z$.
 
 ## Architecture
-VAEs learn a probabilistic representation of data $x$ within a latent space using two neural networks. The encoder takes a sample $x$ and maps it to a distribution $q(z\mid x)$ over latent variables $z$ . The decoder then takes these latent variables and maps them back to a distribution in the original data space $p(x\mid z)$.
+VAEs learn $p(x)$ using two neural networks. i) The encoder takes a sample $x$ and maps it to a distribution $q(z\mid x)$ over latent space $z$ and ii) the decoder takes these latent variables and maps them back to a distribution in the original data space $p(x\mid z)$. 
+
+>[!NOTE]
+> This is somewhat similar to the reconstruction objective of sparse autoencoders, where the reconstruction objective is $\mathbb{E}_{q(z\mid x)}[\log p(x\mid z)]$. However, in VAEs we are not only interested in reconstructing the data but also in learning the distribution of the data $p(x)$. [Here](https://gboxo.github.io/assets/sae_enzymes.pdf) you can find more details about sparse autoencoders.
 
 ## Training Objective
 
