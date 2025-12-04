@@ -1,3 +1,8 @@
+---
+layout: note
+title: Stochastic Gradient Estimation
+---
+
 The objective is to re-write the gradient of the "problematic" expectation as the expectation of the gradient. As result we can use a Monte Carlo Estimate of the expectation of the gradient (i.e. computing the gradient at different samples). 
 
 let's consider that we need to optimize the following objective relative to the parameters $\theta$:$$J(\theta) = \mathbb{E}_{px}[f_\theta(x)]$$

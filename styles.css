@@ -379,3 +379,75 @@ body.light-mode .toc-nav a.active {
 body.light-mode .fixed-toggle {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* Markdown Note Styles */
+.note-content {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.note-content h1,
+.note-content h2,
+.note-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.note-content p {
+  margin-bottom: 1em;
+}
+
+.note-content code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+body.light-mode .note-content code {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Alert Styles */
+blockquote.alert {
+  border-left: 4px solid;
+  padding: 1em;
+  margin: 1.5em 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+body.light-mode blockquote.alert {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.alert-note {
+  border-color: #0969da;
+}
+
+.alert-important {
+  border-color: #8250df;
+}
+
+.alert-warning {
+  border-color: #9a6700;
+}
+
+.alert-tip {
+  border-color: #1a7f37;
+}
+
+.alert-attention {
+  border-color: #cf222e;
+}
+
+.alert-example {
+  border-color: #218bff;
+}
+
+.alert strong {
+  display: block;
+  margin-bottom: 0.5em;
+  color: inherit;
+  opacity: 1;
+}
